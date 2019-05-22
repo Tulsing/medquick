@@ -1,0 +1,16 @@
+<div *ngIf="medicine">
+
+  <h1>Medicine Details</h1>
+  <hr>
+  <div><span>Name:</span>{{medicine.name | uppercase}}</div>
+  <div><span>id: </span>{{medicine.id}}</div>
+  <div><span>Price: </span>{{medicine.price|currency}}</div>
+   <div>
+     <label>Qty:
+      <input [innerText]="medicine.qty" placeholder="Qty">
+          </label>
+  </div>
+  <button (click)="goBack()">go back</button>
+  <button (click)="save()">save</button>
+</div>
+

@@ -1,0 +1,19 @@
+<h2>Medicine In Store</h2>
+
+<ul class="medicine">
+  <li *ngFor="let med of medicine"
+  [class.selected]="med === selectedMed"
+  (click)="onSelect(med)">
+    <!-- <a routerLink="/detail/{{med.id}}"> -->
+
+      <span class="badge">{{med.name}}  </span>{{med.price|currency}}
+
+      <button class="Add" title="Add"
+      (click)="add(med)">Add</button>
+      <hr>
+    <!-- </a> -->
+
+  </li>
+
+</ul>
+<app-medicine-detail [medicine]="selectedMed"></app-medicine-detail>
